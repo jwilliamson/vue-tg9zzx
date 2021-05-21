@@ -17,11 +17,11 @@ export default {
   },
   components: {
     HelloWorld
+  },
+  async mounted () {
+    let response = await axios.get("/responseJson.json");
+    this.result = response.json();
   }
-  // async mounted () {
-  //   // let response = await axios.get("/responseJson.json");
-  //   // this.result = response.json();
-  // }
 }
 </script>
 
