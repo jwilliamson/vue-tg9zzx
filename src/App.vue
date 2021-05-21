@@ -7,6 +7,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from axios
 
 export default {
   name: 'App',
@@ -16,8 +17,9 @@ export default {
   components: {
     HelloWorld
   },
-  mounted () {
-    this.result = await axios.$get('responseJson.json')
+  async mounted () {
+    let response = await axios.get("/responseJson.json");
+    this.result = await response.json();
   }
 }
 </script>
