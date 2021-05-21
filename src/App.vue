@@ -10,8 +10,14 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data: {
+    result: {}
+  },
   components: {
     HelloWorld
+  },
+  mounted () {
+    this.result = await axios.$get('responseJson.json')
   }
 }
 </script>
