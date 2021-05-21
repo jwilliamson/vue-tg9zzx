@@ -7,7 +7,6 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import axios from axios
 
 export default {
   name: 'App',
@@ -16,11 +15,11 @@ export default {
   },
   components: {
     HelloWorld
-  },
-  async mounted () {
-    let response = await axios.get("/responseJson.json");
-    this.result = await response.json();
   }
+  // async mounted () {
+  //   // let response = await axios.get("/responseJson.json");
+  //   // this.result = response.json();
+  // }
 }
 </script>
 
